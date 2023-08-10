@@ -14,7 +14,7 @@ form.addEventListener("submit", (event) => {
   const firstNumber = Number.parseInt(first.value);
   const secondNumber = Number.parseInt(second.value);
 
-  div.innerHTML = "<p>Resultado suma: " + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p>Resultado de la suma " + firstNumber + "+" + secondNumber + ": " + sumar(firstNumber, secondNumber) + "</p>";
 });
 
 form_mult.addEventListener("submit", (event) => {
@@ -23,5 +23,5 @@ form_mult.addEventListener("submit", (event) => {
   const firstNumber = Number.parseInt(first.value);
   const secondNumber = Number.parseInt(second.value);
 
-  div_mult.innerHTML = "<p>Resultado multiplicación: " + multiplicar(firstNumber, secondNumber) + "</p>";
+  div_mult.innerHTML = "<p>Resultado de la multiplicación " + firstNumber + "x" + secondNumber + ": " + multiplicar(firstNumber, secondNumber) + "</p>";
 });
