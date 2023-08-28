@@ -41,5 +41,8 @@ describe("Totalizador", () => {
     expect(metodos.Impuesto(1, 4*100)).toEqual(4);
   });
 
+  it("Deberia devolver suma de precio neto mas impuesto (80)", () => {
+    expect(metodos.PrecioTotal(60, 20)).toEqual(80);
+  });
 
 });

@@ -9,15 +9,17 @@ const div = document.querySelector("#resultado-div");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  var precio_neto = metodos.PrecioNeto(cantidad.value, precio.value);
-  var impuesto = metodos.ImpuestoEstado(estado.value);
+  var precioNeto = metodos.PrecioNeto(cantidad.value, precio.value);
+  var impuesto = metodos.Impuesto(precioNeto, metodos.ImpuestoEstado(estado.value));
+
 
   div.innerHTML = "<p>" + "Cantidad: " + cantidad.value + 
   "<br>Precio: " + precio.value + 
   "<br>Estado: " + estado.value +
-  "&nbsp &nbsp &nbsp Impuesto: " + impuesto +
-  "<br>Precio neto: " + precio_neto +
-  "<br> Impuesto del precio neto para " + estado.value + ": " + metodos.Impuesto(precio_neto, impuesto) +
+  "&nbsp &nbsp &nbsp Impuesto: " + metodos.ImpuestoEstado(estado.value) +
+  "<br>Precio neto: " + precioNeto +
+  "<br> Impuesto del precio neto para " + estado.value + ": " + impuesto +
+  "<br> Precio total: " + metodos.PrecioTotal(precioNeto, impuesto) +
   "</p>"; 
   
 });
