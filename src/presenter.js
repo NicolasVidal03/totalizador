@@ -14,13 +14,13 @@ form.addEventListener("submit", (event) => {
   var descuento = metodos.Descuento(precioNeto);
 
   div.innerHTML = "<p>" + "Cantidad: " + cantidad.value + 
-  "<br>Precio: " + precio.value + 
+  "<br>Precio: $" + precio.value + 
   "<br>Estado: " + estado.value +
-  "&nbsp &nbsp &nbsp Impuesto: " + metodos.ImpuestoEstado(estado.value) +
-  "<br>Precio neto: " + precioNeto +
-  "<br> Impuesto del precio neto para " + estado.value + ": " + impuesto +
-  "<br> Precio total: " + metodos.PrecioTotal(precioNeto, impuesto, metodos.Descuento(precioNeto)) +
-  "<br> Descuento (" + descuento/precioNeto + "): " + descuento +
+  "&nbsp &nbsp &nbsp Impuesto: " + metodos.ImpuestoEstado(estado.value) + "%" +
+  "<br>Precio neto: $" + precioNeto +
+  "<br> Impuesto del precio neto para " + estado.value + ": $" + impuesto +
+  "<br> Precio total: $" + metodos.PrecioTotal(precioNeto, impuesto, metodos.Descuento(precioNeto)) +
+  "<br> Descuento (" + descuento/precioNeto + "%): $" + descuento +
   "</p>"; 
   
 });
