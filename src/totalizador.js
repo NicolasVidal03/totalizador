@@ -13,4 +13,10 @@ function ImpuestoEstado(estado) {
   return impuesto;
 }
 
-export default ImpuestoEstado;
+function PrecioNeto(cant, prec) {
+  return cant * prec;
+}
+
+const metodos={ImpuestoEstado, PrecioNeto};
+
+export default metodos;

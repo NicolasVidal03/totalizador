@@ -1,4 +1,4 @@
-import ImpuestoEstado from "./totalizador";
+import metodos from "./totalizador";
 
 const cantidad = document.querySelector("#cant-items");
 const precio = document.querySelector("#precio-item");
@@ -12,7 +12,8 @@ form.addEventListener("submit", (event) => {
   div.innerHTML = "<p>" + "Cantidad: " + cantidad.value + 
   "<br>Precio: " + precio.value + 
   "<br>Estado: " + estado.value +
-  "&nbsp &nbsp &nbsp Impuesto: " + ImpuestoEstado(estado.value) +
+  "&nbsp &nbsp &nbsp Impuesto: " + metodos.ImpuestoEstado(estado.value) +
+  "<br>Precio neto: " + metodos.PrecioNeto(cantidad.value, precio.value) +
   "</p>"; 
   
 });
