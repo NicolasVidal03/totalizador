@@ -17,6 +17,10 @@ function PrecioNeto(cant, prec) {
   return cant * prec;
 }
 
-const metodos={ImpuestoEstado, PrecioNeto};
+function Impuesto(prec_neto, impu) {
+  return prec_neto*impu/100;
+}
+
+const metodos={ImpuestoEstado, PrecioNeto, Impuesto};
 
 export default metodos;
