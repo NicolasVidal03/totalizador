@@ -21,8 +21,8 @@ function Impuesto(prec_neto, impu) {
   return prec_neto*impu/100;
 }
 
-function PrecioTotal(prec_neto, impu) {
-  return prec_neto + impu;
+function PrecioTotal(prec_neto, impu, desc) {
+  return prec_neto + impu - desc;
 }
 
 function Descuento(prec) {
@@ -31,9 +31,9 @@ function Descuento(prec) {
     descuento = 0.03;
   if(prec >= 3000 && prec < 7000)
     descuento = 0.05;
-  if(prec >= 7000)
+  if(prec >= 7000 && prec < 10000)
     descuento = 0.07;
-  if(prec >= 10000)
+  if(prec >= 10000 && prec < 30000)
     descuento = 0.10;
   if(prec >= 30000)
     descuento = 0.15;

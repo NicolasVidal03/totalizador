@@ -42,7 +42,7 @@ describe("Totalizador", () => {
   });
 
   it("Deberia devolver suma de precio neto mas impuesto (80)", () => {
-    expect(metodos.PrecioTotal(60, 20)).toEqual(80);
+    expect(metodos.PrecioTotal(60, 20, 0)).toEqual(80);
   });
 
   it("Deberia devolver el descuento de 1000", () => {
@@ -63,6 +63,10 @@ describe("Totalizador", () => {
 
   it("Deberia devolver el descuento de 30000", () => {
     expect(metodos.Descuento(30000)).toEqual(4500);
+  });
+
+  it("Deberia devolver precio total mas el descuento", () => {
+    expect(metodos.PrecioTotal(1000, 10, 30)).toEqual(980);
   });
 
 });
