@@ -1,11 +1,12 @@
-const cantidad_items = document.querySelector("#cant-items");
-const form = document.querySelector("#tot-form");
-const div = document.querySelector("#resultado-div");
+import ImpuestoEstado from "./totalizador"
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  console.log(cantidad_items.value);
-  div.innerHTML = "<p>" + "Cantidad: " + cantidad_items.value + "</p>"; 
+describe("Totalizador", () => {
+  it("CA deberia devolver 8.25", () => {
+    expect(ImpuestoEstado("CA")).toEqual(8.25);
+  });
   
+  it("TX deberia devolver 6.25", () => {
+    expect(ImpuestoEstado("TX")).toEqual(6.25);
+  });
+
 });
