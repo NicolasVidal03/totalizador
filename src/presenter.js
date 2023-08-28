@@ -20,6 +20,7 @@ form.addEventListener("submit", (event) => {
   "<br>Precio neto: " + precioNeto +
   "<br> Impuesto del precio neto para " + estado.value + ": " + impuesto +
   "<br> Precio total: " + metodos.PrecioTotal(precioNeto, impuesto) +
+  "<br> Descuento: " + metodos.Descuento(precioNeto) +
   "</p>"; 
   
 });

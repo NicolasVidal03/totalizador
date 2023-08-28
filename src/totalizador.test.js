@@ -45,4 +45,24 @@ describe("Totalizador", () => {
     expect(metodos.PrecioTotal(60, 20)).toEqual(80);
   });
 
+  it("Deberia devolver el descuento de 1000", () => {
+    expect(metodos.Descuento(1000)).toEqual(30);
+  });
+
+  it("Deberia devolver el descuento de 3000", () => {
+    expect(metodos.Descuento(3000)).toEqual(150);
+  });
+
+  it("Deberia devolver el descuento de 7000", () => {
+    expect(metodos.Descuento(7000)).toEqual(490.00000000000006);
+  });
+  
+  it("Deberia devolver el descuento de 10000", () => {
+    expect(metodos.Descuento(10000)).toEqual(1000);
+  });
+
+  it("Deberia devolver el descuento de 30000", () => {
+    expect(metodos.Descuento(30000)).toEqual(4500);
+  });
+
 });
